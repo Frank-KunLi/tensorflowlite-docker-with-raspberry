@@ -1,0 +1,13 @@
+# Python packages required for classify_picamera.py
+numpy
+Pillow
+flask
+camera
+time
+utils
+collections
+requests
+argparse
+time
+subprocess
+
