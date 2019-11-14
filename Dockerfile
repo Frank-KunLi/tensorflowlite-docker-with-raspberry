@@ -8,7 +8,9 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y -qq --no-install-recommends usbutils git && \
     pip3 install requests flask && \
     apt-get clean && \
-    rm -fr /var/lib/apt/lists
+    rm -fr /var/lib/apt/lists &&\
+    ./download.sh
+
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 
