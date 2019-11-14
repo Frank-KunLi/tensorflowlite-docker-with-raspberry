@@ -11,7 +11,8 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     pip3 install requests flask && \
     apt-get clean && \
     rm -fr /var/lib/apt/lists &&\
-    /download.sh
+    cd / &&\
+    ./download.sh
 
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
