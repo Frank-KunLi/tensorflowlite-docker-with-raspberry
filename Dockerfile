@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-ADD download.sh /
+ADD download.sh /root/
 
 LABEL maintainer="amir.mahjoubi@esprit.tn"
 
@@ -11,7 +11,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     pip3 install requests flask && \
     apt-get clean && \
     rm -fr /var/lib/apt/lists &&\
-    cd / &&\
+    cd /root/ &&\
     ./download.sh
 
 
