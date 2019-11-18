@@ -10,4 +10,5 @@ requests
 argparse
 time
 subprocess
-
+curl
+unzip
