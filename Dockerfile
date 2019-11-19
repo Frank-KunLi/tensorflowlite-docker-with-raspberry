@@ -14,7 +14,12 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get clean && \
     rm -fr /var/lib/apt/lists && \
     cd /root/ && \
-    ./download.sh
+    ./download.sh && \
+    curl -O https://storage.googleapis.com/download.tensorflow.org/models/tflite/mobilenet_v1_1.0_224_quant_and_labels.zip && \
+    unzip mobilenet_v1_1.0_224_quant_and_labels.zip -d /tmp/ && \
+    rm mobilenet_v1_1.0_224_quant_and_labels.zip && \
+    curl https://dl.google.com/coral/canned_models/mobilenet_v1_1.0_224_quant_edgetpu.tflite -o /tmp/mobilenet_v1_1.0_224_quant_edgetpu.tflite
+
 
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
