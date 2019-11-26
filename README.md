@@ -1,10 +1,6 @@
 # OpenCV Example Container
 
-Example application using OpenCV for identifying faces in video. This
-was forked from
-[slipstream/nuvlabox-video](https://github.com/slipstream/nuvlabox-video).
-
-Original code was released under the MIT license. Any modifications
-are also released under that license.
+Docker/Travis application using OpenCV for identifying objects by displaying probabilty using deep learning in video.
+This code is an attempt to adapt tensoflow lite to raspberry pi and a different camera from the camera pi like the web camera in this case. 
 
 
